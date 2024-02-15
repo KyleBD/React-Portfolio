@@ -1,13 +1,20 @@
 import LogoTitle from '../../assets/images/logo-s.png'
 import {Link} from 'react-router-dom'
 import './index.scss'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-enimate')
-    const nameArray = ['y', 'l', 'e']
-    const jobArray = ['c', 'o', 'm', 'p', 'u', 't', 'e', 'r', ' ', 'e', 'n', 'g', 'i', 'n', 'e', 'e', 'r', 'i', 'n', 'g', ' ', 's', 't', 'u', 'd', 'e', 'n', 't', '.']
+    const nameArray = [' ', 'K', 'y', 'l', 'e']
+    const jobArray = ['c', 'o', 'm', 'p', 'u', 't', 'e', 'r', ' ', 'e', 'n', 'g', 'i', 'n', 'e', 'e', 'r']
+    
+    useEffect(() => {
+        return setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 4000)
+    }, [])
+
     return (
         <div className="container home-page">
             <div className="text-zone">
@@ -17,7 +24,6 @@ const Home = () => {
                 <br /> 
                 <span className={`${letterClass} _13`}>I</span> 
                 <span className={`${letterClass} _14`}>'m</span>
-                <img src={LogoTitle} alt="developer" />
                 <AnimatedLetters letterClass={letterClass}
                 strArray={nameArray}
                 idx={15}/>
