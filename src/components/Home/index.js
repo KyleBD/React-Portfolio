@@ -2,12 +2,13 @@ import LogoTitle from '../../assets/images/logo-s.png'
 import {Link} from 'react-router-dom'
 import './index.scss'
 import { useEffect, useState } from 'react'
+import Logo from './Logo'
 import AnimatedLetters from '../AnimatedLetters'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-enimate')
-    const nameArray = [' ', 'K', 'y', 'l', 'e']
-    const jobArray = ['c', 'o', 'm', 'p', 'u', 't', 'e', 'r', ' ', 'e', 'n', 'g', 'i', 'n', 'e', 'e', 'r']
+    const nameArray = [' ', 'K', 'y', 'l', 'e', ',']
+    const jobArray = ['C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ' ', 'E', 'n', 'g', 'i', 'n', 'e', 'e', 'r']
     
     useEffect(() => {
         return setTimeout(() => {
@@ -35,6 +36,7 @@ const Home = () => {
                 <h2>Computer Engineer Student @ University of Toronto</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
+            <Logo />
         </div>
     )
 }
