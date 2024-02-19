@@ -8,8 +8,9 @@ import AnimatedLetters from '../AnimatedLetters'
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-enimate')
     const nameArray = [' ', 'K', 'y', 'l', 'e', ',']
-    const jobArray = ['C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ' ', 'E', 'n', 'g', 'i', 'n', 'e', 'e', 'r']
-    
+    const jobArray = ['C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ' ', 'E', 'n', 'g', 'i', 'n', 'e', 'e', 'r', 'i', 'n', 'g']
+    const jobArrayTwo = ['S', 't', 'u', 'd', 'e', 'n', 't']
+
     useEffect(() => {
         return setTimeout(() => {
             setLetterClass('text-animate-hover')
@@ -32,6 +33,10 @@ const Home = () => {
                 <AnimatedLetters letterClass={letterClass}
                 strArray={jobArray}
                 idx={22}/>
+                <br />
+                <AnimatedLetters letterClass={letterClass}
+                strArray={jobArrayTwo}
+                idx={15}/>
                 </h1>
                 <h2>Computer Engineer Student @ University of Toronto</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
