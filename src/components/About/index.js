@@ -1,6 +1,9 @@
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCuttlefish, faGitAlt,  faJsSquare, faPython, faReact, faRust } from '@fortawesome/free-brands-svg-icons'
+
 
 const About = () => {
     const[letterClass, setLetterClass] = useState('text-animate')
@@ -31,6 +34,28 @@ const About = () => {
                      During this period, I leveraged Python to automate tasks, streamline processes, and ensure Azure license compliance. 
                      Collaborating with cross-functional teams, I developed projects for a 2500+ employee energy company, embracing Agile
                      principles to efficiently deliver results.</p>
+            </div>
+            <div className='stage-cube-cont'>
+                <div className='cubespinner'>
+                    <div className='face1'>
+                        <FontAwesomeIcon icon={faPython} color='#FFDE57' />
+                    </div>
+                    <div className='face2'>
+                        <FontAwesomeIcon icon={faJsSquare} color='#EFD81D' />
+                    </div>
+                    <div className='face3'>
+                        <FontAwesomeIcon icon={faReact} color='#5ED4F4' />
+                    </div>
+                    <div className='face4'>
+                        <FontAwesomeIcon icon={faCuttlefish} color='#044F88' />
+                    </div>
+                    <div className='face5'>
+                        <FontAwesomeIcon icon={faGitAlt} color='#EC4D28' />
+                    </div>
+                    <div className='face6'>
+                        <FontAwesomeIcon icon={faRust} color='#000000' />
+                    </div>
+                </div>
             </div>
         </div>
     )
