@@ -1,0 +1,35 @@
+import Loader from 'react-loaders'
+import './index.scss'
+import AnimatedLetters from '../AnimatedLetters'
+import { useEffect, useState } from 'react'
+
+const Contact = () => {
+    const[letterClass, setLetterClass] = useState('text-animate')
+    
+    useEffect(() => {
+        return setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 3000)
+    }, [])
+    return (
+        <>
+        <div className='container contact-page'>
+        <div className='text-zone'>
+            <h1>
+                <AnimatedLetters 
+                letterClass={letterClass}
+                strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'M', 'e']}
+                idx={15}/>
+            </h1>
+            <p>
+                Please feel free to reach out if you are interested in learning more about any of the projects that
+                I am working on or if we are passionate about similar things!
+            </p>
+            </div>
+        </div>
+        <Loader type='pacman'/>
+        </>
+    )
+}
+
+export default Contact
