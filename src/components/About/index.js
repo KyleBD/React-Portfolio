@@ -9,10 +9,14 @@ import { faCuttlefish, faGitAlt,  faJsSquare, faPython, faReact, faRust } from '
 const About = () => {
     const[letterClass, setLetterClass] = useState('text-animate')
 
-    useEffect(() => {
+    const setClass = async() =>{
         return setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
+        }
+
+    useEffect(() => {
+        setClass();
     }, [])
 
     return(

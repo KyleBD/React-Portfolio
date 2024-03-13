@@ -6,10 +6,14 @@ import { useEffect, useState } from 'react'
 const Contact = () => {
     const[letterClass, setLetterClass] = useState('text-animate')
     
-    useEffect(() => {
+    const letClass = async() =>{
         return setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
+        }
+
+    useEffect(() => {
+        letClass();
     }, [])
     return (
         <>

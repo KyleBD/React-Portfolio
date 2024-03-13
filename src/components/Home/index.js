@@ -12,10 +12,14 @@ const Home = () => {
     const jobArray = ['C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ' ', 'E', 'n', 'g', 'i', 'n', 'e', 'e', 'r', 'i', 'n', 'g']
     const jobArrayTwo = ['S', 't', 'u', 'd', 'e', 'n', 't']
 
-    useEffect(() => {
+    const classlet = async() =>{
         return setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 4000)
+        }
+
+    useEffect(() => {
+        classlet();
     }, [])
 
     return (
